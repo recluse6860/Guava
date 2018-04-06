@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="MercuryUIAutomation" parallel="classes" thread-count="1">
+    <listeners>
+        <listener class-name="com.paic.mercury.listeners.CaseListener" />
+        <listener class-name="com.paic.mercury.listeners.RetryListener" />
+    </listeners>
+<!--     静止testng产生报告 -->
+    <usedefaultlisteners name="false" />
+
+<!--     <test name="wormhole">
+        <classes>
+            <class name="com.youzan.opentest.ui.testcase.demo.PassDemoTest"/>
+            <class name="com.youzan.opentest.ui.testcase.demo.FailDemoTest"/>
+        </classes>
+    </test> -->
+    
+    <test name="admin">
+        <classes>
+            <class name="com.paic.mercury.Testcase.Admin.GoogleTest"/>
+        </classes>
+    </test>
+    
+</suite>
