@@ -5,11 +5,15 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
+import org.openqa.selenium.By;
+
 public class GooglePage {
-  private SelenideElement q;
+  private SelenideElement kw =$(By.xpath("//input[@id='kw']"));
+  
   
   public SearchResultsPage searchFor(String text) {
-    q.val(text).pressEnter();
+	  kw.sendKeys(text);
+    //kw.val().pressEnter();
     return page(SearchResultsPage.class);
   }
 }

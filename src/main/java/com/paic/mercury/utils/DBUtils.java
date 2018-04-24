@@ -40,7 +40,7 @@ public class DBUtils {
 		}
 
 		public DBUtils() {
-			dataSource = MyDataSource.getdataSource();
+			dataSource = JdbcUtils.getDataSource();
 		}
 
 		/**
@@ -632,14 +632,15 @@ public class DBUtils {
 	
 	
 	public static void main(String[] args) {  
-		JdbcUtils jdbcUtils = new JdbcUtils();  
-		jdbcUtils.getConnection();  
+		DBUtils dbutils = new DBUtils();  
+		String testSQL1 = "insert into dept (deptno,dname,loc) values (50,3,4)";
+		int result = 0;
+		
+
         try {  
-              
-        } catch (SQLException e) {  
-            e.printStackTrace();  
+        		result = dbutils.insert(testSQL1, null);
         } finally {  
-        		jdbcUtils.close();
+        		JdbcUtils.close();
         }  
     }  	
 	

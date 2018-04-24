@@ -19,7 +19,7 @@
 <!--         <assertj.version>3.7.0</assertj.version> -->
         <guava.version>21.0</guava.version>
         <testFiles>development</testFiles>
-        <environment>42</environment>       
+        <environment>dev</environment>       
   </properties>
 
   <dependencies>
@@ -194,7 +194,7 @@
     <profiles>
         <profile>
             <properties>
-                <environment>42</environment>
+                <environment>dev</environment>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>

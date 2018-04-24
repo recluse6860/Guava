@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<common>
+		<common1>user1</common1>
+		<common2>user2</common2>
+	</common>
+	<JoinUs>
+	    <Parameter1>Pa1</Parameter1>
+		<Parameter2>Pa2</Parameter2>
+	</JoinUs>
+</data>

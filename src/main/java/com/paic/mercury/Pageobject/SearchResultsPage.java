@@ -7,7 +7,7 @@ import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.CollectionCondition.texts;
 
 public class SearchResultsPage {
-  @FindBy(css = "#ires .g")
+  @FindBy(xpath = "//*[@id='1']/h3/a/em")
   private ElementsCollection results;
 
   public void checkResultsSize(int expectedSize) {

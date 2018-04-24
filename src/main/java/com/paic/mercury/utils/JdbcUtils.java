@@ -22,18 +22,18 @@ public class JdbcUtils {
     static{
         try{
             //通过代码创建C3P0数据库连接池
-            /*ds = new ComboPooledDataSource();
-            ds.setDriverClass("com.mysql.jdbc.Driver");
-            ds.setJdbcUrl("jdbc:mysql://localhost:3306/jdbcstudy");
-            ds.setUser("root");
-            ds.setPassword("XDP");
+            ds = new ComboPooledDataSource();
+            ds.setDriverClass("com.mysql.cj.jdbc.Driver");
+            ds.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/student");
+            ds.setUser("recluse6860");
+            ds.setPassword("722511catnicole");
             ds.setInitialPoolSize(10);
             ds.setMinPoolSize(5);
-            ds.setMaxPoolSize(20);*/
+            ds.setMaxPoolSize(20);
             
             //通过读取C3P0的xml配置文件创建数据源，C3P0的xml配置文件c3p0-config.xml必须放在src目录下
             //ds = new ComboPooledDataSource();//使用C3P0的默认配置来创建数据源
-            ds = new ComboPooledDataSource("mysql");//使用C3P0的命名配置来创建数据源
+            //ds = new ComboPooledDataSource("mysql");//使用C3P0的命名配置来创建数据源
             
         }catch (Exception e) {
             throw new ExceptionInInitializerError(e);

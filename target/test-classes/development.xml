@@ -4,7 +4,6 @@
         <listener class-name="com.paic.mercury.listeners.CaseListener" />
         <listener class-name="com.paic.mercury.listeners.RetryListener" />
     </listeners>
-<!--     静止testng产生报告 -->
     <usedefaultlisteners name="false" />
 
 <!--     <test name="wormhole">
@@ -16,7 +15,7 @@
     
     <test name="admin">
         <classes>
-            <class name="com.paic.mercury.Testcase.Admin.GoogleTest"/>
+            <class name="com.paic.mercury.Testcase.Model1.GoogleTest"/>
         </classes>
     </test>
     

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 public class Common {
     public String browser;
     public String MercuryAdmin;
+	private String MercuryHomePageUrl;
 
     /**
      * 设置需要启动的浏览器
@@ -42,15 +43,11 @@ public class Common {
         }
         Configuration.screenshots=false;
     }
-
-    /**
-     * 设置手机号码
-     * @param value
-     * @return
-     */
-    @Value("${mercury.admin}")
-    private void setMercuryAdmin(String value) {
-        this.MercuryAdmin = value.trim();
-    }
+    
+    @Value("${mercury.homepage}")
+    private void setMercuryHomePageUrl(String value) {
+        this.MercuryHomePageUrl = value.trim();
+    } 
+    
 }
 
